@@ -1,0 +1,34 @@
+/* Comentário de várias linhas
+   Testando se o analisador lê corretamente
+   123 456 .5 10. .9E10
+*/
+
+IF x <= 10 THEN
+    y := 3.14
+ELSE
+    y := 2E+10
+
+WHILE count != 0 DO
+    count := count - 1
+
+REPEAT
+    total := total + price
+UNTIL total >= limit
+
+/* Comentário dentro do código */
+a123  _var  VAR_2  elseX
+
+--testando operadores
+x := x + 1
+z := (a - b) * c / d
+
+/* comentário com * * *** e / */
+num1 := 123
+num2 := 45.67
+num3 := .5
+num4 := 5.
+num5 := 1.23E-4
+num6 := 9E+9
+
+/* Caso de erro */
+@
