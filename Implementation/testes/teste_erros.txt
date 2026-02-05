@@ -1,0 +1,56 @@
+{%
+    Arquivo de Teste - Erros Lexicos
+    Este arquivo contem varios erros para testar o tratamento de erros
+%}
+
+void main()
+[
+    int x;
+    float y;
+    
+    {% ERRO 1: Caractere '@' invalido %}
+    x := 10 @ 5;
+    
+    {% ERRO 2: Caractere '#' invalido %}
+    y := #3.14;
+    
+    {% ERRO 3: Operador '=' sozinho (deveria ser ':=' ou '==') %}
+    x = 20;
+    
+    {% ERRO 4: Operador '!' sozinho (deveria ser '!=') %}
+    if x ! 10 then
+    [
+        y := 0.0;
+    ]
+    
+    {% ERRO 5: Caractere '$' invalido %}
+    int $valor;
+    
+    {% ERRO 6: Caractere '&' invalido %}
+    x := x & y;
+    
+    {% ERRO 7: Caractere '~' invalido %}
+    y := ~5.0;
+    
+    {% ERRO 8: Caractere ':' sozinho (deveria ser ':=') %}
+    x : 30;
+    
+    {% ERRO 9: Constante de caractere nao fechada %}
+    char c;
+    c := 'A;
+    
+    {% ERRO 10: Caractere de barra invertida invalido %}
+    y := 10 \ 2;
+    
+    {% Codigo valido para mostrar que continua apos erros %}
+    x := 100;
+    y := 3.14;
+    
+    if x > 0 then
+    [
+        y := y + 1.0;
+    ]
+]
+
+{% Fim do arquivo de teste de erros %}
+

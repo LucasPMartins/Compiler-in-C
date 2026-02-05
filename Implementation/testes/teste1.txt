@@ -1,0 +1,88 @@
+{%
+    Programa de Teste - Analisador Lexico
+    Disciplina: Construcao de Compiladores - UFU
+    
+    Este arquivo contem exemplos de todos os tokens da linguagem
+    para testar o funcionamento do scanner.
+%}
+
+{% Declaracao de funcao principal %}
+void main()
+[
+    {% Declaracoes de variaveis %}
+    int contador;
+    int limite;
+    float soma;
+    float media;
+    char letra;
+    
+    {% Atribuicoes %}
+    contador := 0;
+    limite := 100;
+    soma := 0.0;
+    letra := 'A';
+    
+    {% Expressoes com operadores aritmeticos %}
+    soma := soma + 1.5;
+    soma := soma - 0.5;
+    soma := soma * 2;
+    soma := soma / 2;
+    soma := 2 ** 3;
+    
+    {% Numeros float com notacao cientifica %}
+    soma := 1.5E10;
+    soma := 0.1E-2;
+    soma := 2.5E+3;
+    soma := 3.14159;
+    
+    {% Estrutura condicional if-then-else %}
+    if contador == 0 then
+    [
+        contador := 1;
+    ]
+    elsif contador != limite then
+    [
+        contador := contador + 1;
+    ]
+    else
+    [
+        contador := 0;
+    ]
+    
+    {% Operadores relacionais %}
+    if contador < limite then
+    [
+        soma := soma + 1;
+    ]
+    
+    if contador > 0 then
+    [
+        soma := soma - 1;
+    ]
+    
+    if contador <= 50 then
+    [
+        media := soma / contador;
+    ]
+    
+    if contador >= 10 then
+    [
+        media := media + 0.1;
+    ]
+    
+    {% Estrutura de repeticao while-do %}
+    while contador < limite do
+    [
+        contador := contador + 1;
+        soma := soma + contador;
+    ]
+    
+    {% Estrutura de repeticao for %}
+    for contador := 0;
+    
+    {% Chamada de funcao com parametros %}
+    int funcaoTeste(int param1, float param2, char param3);
+]
+
+{% Fim do programa de teste %}
+
