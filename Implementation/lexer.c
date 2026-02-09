@@ -401,6 +401,7 @@ Token proximo_token(Lexer* lexer) {
             avancar(lexer);
             return criar_token(T_RELOP, lexer->linha, lexer->coluna, lexer->buffer);
         case 35:
+            adicionar_ao_buffer(lexer, caracter_lido);
             avancar(lexer);
             return criar_token(T_OP, lexer->linha, lexer->coluna, lexer->buffer);
         case 36:
@@ -416,13 +417,14 @@ Token proximo_token(Lexer* lexer) {
             sprintf(str_indice, "%d", indice);
             return criar_token(T_ID, lexer->linha, lexer->coluna, str_indice);
         case 38:
+            adicionar_ao_buffer(lexer, caracter_lido);
             avancar(lexer);
             return criar_token(T_OP, lexer->linha, lexer->coluna, lexer->buffer);
         case 39:
+            adicionar_ao_buffer(lexer, caracter_lido);
             avancar(lexer);
             return criar_token(T_OP, lexer->linha, lexer->coluna, lexer->buffer);
         case 40:
-            adicionar_ao_buffer(lexer, caracter_lido);
             avancar(lexer);
             return criar_token(T_OP, lexer->linha, lexer->coluna, lexer->buffer);
         case 41:
@@ -437,7 +439,6 @@ Token proximo_token(Lexer* lexer) {
             else state = 43;
             break;
         case 43: {
-            avancar(lexer);
             TipoToken tipo_tk = get_token(lexer->buffer);
             if(tipo_tk == NUM_PALAVRAS_RESERVADAS){
                 indice = inserir_simbolo(lexer->tabela, lexer->buffer, T_ID, "none");

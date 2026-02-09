@@ -36,11 +36,11 @@ void main()
     soma := 3.14159;
     
     {% Estrutura condicional if-then-else %}
-    if contador == 0 then
+    if (contador == 0) then
     [
         contador := 1;
     ]
-    elsif contador != limite then
+    elsif (contador != limite) then
     [
         contador := contador + 1;
     ]
@@ -50,38 +50,37 @@ void main()
     ]
     
     {% Operadores relacionais %}
-    if contador < limite then
+    if (contador < limite) then
     [
         soma := soma + 1;
     ]
     
-    if contador > 0 then
+    if (contador > 0) then
     [
         soma := soma - 1;
     ]
     
-    if contador <= 50 then
+    if (contador <= 50) then
     [
         media := soma / contador;
     ]
     
-    if contador >= 10 then
+    if (contador >= 10) then
     [
         media := media + 0.1;
     ]
     
     {% Estrutura de repeticao while-do %}
-    while contador < limite do
+    while (contador < limite) do
     [
         contador := contador + 1;
         soma := soma + contador;
     ]
     
     {% Estrutura de repeticao for %}
-    for contador := 0;
-    
-    {% Chamada de funcao com parametros %}
-    int funcaoTeste(int param1, float param2, char param3);
+    for (contador; 1 ; 10; contador + 1)[
+        soma := soma + contador;
+    ]
 ]
 
 {% Fim do programa de teste %}

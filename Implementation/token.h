@@ -64,6 +64,47 @@ typedef enum {
 } TipoToken;
 
 /**
+ * Array de strings correspondentes aos nomes dos tipos de tokens.
+ * A ordem deve corresponder exatamente à ordem do enum TipoToken.
+ */
+static const char* NOMES_TOKENS[] = {
+    /* Palavras reservadas */
+    "T_VOID",
+    "T_INT",
+    "T_CHAR",
+    "T_FLOAT",
+    "T_MAIN",
+    "T_IF",
+    "T_THEN",
+    "T_ELSIF",
+    "T_ELSE",
+    "T_WHILE",
+    "T_DO",
+    "T_FOR",
+    /* Operadores */
+    "T_OP",
+    "T_RELOP",
+    "T_ATRIB",
+    /* Delimitadores */
+    "T_ABREPAR",
+    "T_FECHAPAR",
+    "T_ABREBLOCO",
+    "T_FECHABLOCO",
+    "T_VIRG",
+    "T_PV",
+    "T_COMENT",
+    /* Identificadores e constantes */
+    "T_ID",
+    "T_NUM_INT",
+    "T_NUM_FLOAT",
+    "T_CHAR_CONST",
+    /* Especiais */
+    "T_WS",
+    "T_EOF",
+    "T_ERROR"
+};
+
+/**
  * Estrutura auxiliar para associar palavras reservadas aos seus tipos.
  */
 typedef struct {
@@ -75,9 +116,21 @@ typedef struct {
  * Lista de todas as palavras reservadas da linguagem.
  * Usada para pré-popular a tabela de símbolos na inicialização.
  */
-static const PalavraReservada PALAVRAS_RESERVADAS[];
+static const PalavraReservada PALAVRAS_RESERVADAS[] = {
+    {"void",    T_VOID},
+    {"int",     T_INT},
+    {"char",    T_CHAR},
+    {"float",   T_FLOAT},
+    {"main",    T_MAIN},
+    {"if",      T_IF},
+    {"then",    T_THEN},
+    {"elsif",   T_ELSIF},
+    {"else",    T_ELSE},
+    {"while",   T_WHILE},
+    {"do",      T_DO},
+    {"for",     T_FOR}
+};
 
-/* Número total de palavras reservadas */
 extern const int NUM_PALAVRAS_RESERVADAS;
 
 /**

@@ -2,7 +2,6 @@
 #define LEXER_H
 
 #include <stdio.h>
-#include "token.h"
 #include "tabela_simbolos.h"
 
 /* Tamanho máximo do buffer para construção de lexemas */
