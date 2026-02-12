@@ -185,8 +185,7 @@ int main(int argc, char *argv[])
         printf("Selecine a opcao de analise:\n");
         printf("1 - Analise Lexica\n");
         printf("2 - Analise Sintatica\n");
-        printf("3 - Compilar\n");
-        printf("4 - Sair\n");
+        printf("3 - Sair\n");
         printf("Opcao: ");
         scanf("%d", &opcao);
         printf("\n");
@@ -222,15 +221,12 @@ int main(int argc, char *argv[])
             break;
         case 3:
             break;
-        case 4:
-            opcao = 4; // Sair
-            break;
         default:
             opcao = 0;
             printf("Opcao invalida. Tente novamente.\n\n");
             break;
         }
-    } while (opcao != 4);
+    } while (opcao != 3);
 
     printf("Saindo do programa.\n");
     destruir_lexer(lexer);
